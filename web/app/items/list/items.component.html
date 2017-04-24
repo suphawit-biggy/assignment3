@@ -1,0 +1,24 @@
+<div *ngFor="let item of items" class="row">
+  <div class="panel panel-primary col-md-offset-2 col-md-6" (click)="showDetail(item)">
+    <div class="panel-heading">
+      <h2 class="panel-title">{{item.id}}</h2>
+    </div>
+
+    <div class="panel-body row">
+
+      <div class="col-md-6 col-sm-6">
+        <h2>{{item.name}}</h2>
+        <p>Description <br> {{checkDes(item.des)}}</p>
+        <p>In stock: {{item.amount}}</p>
+        <p>Rating: {{item.rate}}</p>
+        <p>Price: {{item.price}}</p>
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <img class="img-responsive" [src]="item.image" [title]="item.name">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+

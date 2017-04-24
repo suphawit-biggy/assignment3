@@ -1,0 +1,17 @@
+spring:
+  profiles:
+    active:
+      - DBDataSource
+      - inMemoryDB
+server:
+  baseUrl: http://localhost:8080/
+  imageUrl: item/images/
+  imageServerDir: C:\Comp-Base\assignment\assignment3\images
+---
+spring:
+  profiles: inMemoryDB
+  datasource:
+    url: jdbc:h2:mem:testdb;DB_CLOSE_DELAY=- 1;DB_CLOSE_ON_EXIT=FALSE
+    driverClassName: org.h2.Driver
+    username: sa
+    password:
